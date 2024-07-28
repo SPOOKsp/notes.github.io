@@ -3,13 +3,13 @@ title: "About The Notes"
 layout: single
 classes: wide
 lang: en
-lang-ref: about-airss
+lang-ref: about-notes
 sidebar:
   nav: "docs"
 permalink: /
 ---
 
-This is a document to note something I want to note.
+This is a document for things I want to record.
 
 Licence and Citation
 --------------------
