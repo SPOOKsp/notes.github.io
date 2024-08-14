@@ -29,7 +29,7 @@ This page provides details of the various core utilities of the ARES-ACNN-AIRSS.
 ├── safety.py
 ├── scf2xsf
 └── split_xsf
-```console
+```
 
 batch_ares
 ----------
