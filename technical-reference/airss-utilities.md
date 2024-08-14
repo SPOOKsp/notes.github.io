@@ -8,7 +8,69 @@ sidebar:
   nav: "docs"
 ---
 
-This page provides details of the various core utilities of the AIRSS package.
+This page provides details of the various core utilities of the ARES-ACNN-AIRSS.
+
+```console
+.
+├── ares2xsf
+├── batch_ares
+├── cax
+├── dft2xsf
+├── dyn_ares_in
+├── dyn_batch_relax
+├── evalan.py
+├── lammps2poscar.py
+├── pd.py
+├── poscar2lammps.py
+├── relax2xsf
+├── relax_lammps
+├── rerr
+├── rres
+├── safety.py
+├── scf2xsf
+└── split_xsf
+```console
+
+batch_ares
+----------
+
+A convinent bash script for submiting multiple ARES scf/relax jobs. You may need to check and modify the `dyn_ares_in` file for setting your own DFT calculation.
+
+dft2xsf
+-------
+
+A bash script for batch converting ARES scf/cell-relax output to xsf.
+
+> **Note:** Be careful when using this script after reading it.
+
+dyn_batch_relax
+---------------
+
+Batch relax `.res` with ACNN and LAMMPS.
+
+cax
+---
+
+Extension for `ca` tool. Two new features have been added: 
+`-us`: Checking for unsafe structures. (Bond length is shorter than specified by `-sb`)
+`-m`: Maxwell construction.
+
+ppr
+---
+
+Post process
+
+
+
+
+
+
+
+
+
+
+
+
 
 airss.pl
 --------
