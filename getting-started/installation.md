@@ -8,38 +8,57 @@ sidebar:
   nav: "docs"
 ---
 
-Extract `airss-x.x.x.tgz` and then navigate into the `airss-x.x.x/` directory:
+### Dependencies
+- Libtorch (Pre-cxx11 ABI for broader platform support)
+- OpenBLAS (Accelerated molecular dynamics simulations for CPU) [make USE_OPENMP=1]
+- CUDA (Optional: for GPU accelerating. Consider adding cudnn)
+
+### Installation from Source
+Extract `torchdemo-x.x.x.tgz` and then navigate into the `torchdemo-x.x.x/` directory:
 
 ```console
-$ tar -xvf airss-0.9.1.tgz
+$ tar -xvf torchdemo-v3.tar.gz
 
-./._airss-0.9.1
-airss-0.9.1/
-airss-0.9.1/._bin
-airss-0.9.1/bin/
+x torchdemo-v3/
+x torchdemo-v3/CMakeLists.txt
+x torchdemo-v3/README.md
+x torchdemo-v3/al/
+x torchdemo-v3/al/al-py/
 ...
-airss-0.9.1/bin/castep2res
-airss-0.9.1/bin/._crud.pl
-airss-0.9.1/bin/crud.pl
+x torchdemo-v3/src/utilities.h
+x torchdemo-v3/src/utilsnnp.cpp
+x torchdemo-v3/src/utilsnnp.h
 
-$ cd airss-0.9.1
+$ cd torchdemo
+```
+
+Modify `prefix.cmake` for specifying the path of the dependency package.
+```cmake
+# user modify
+set(CUDA_TOOLKIT_ROOT_DIR /path/to/cuda)        # optional
+set(CMAKE_CXX_COMPILER /path/to/c++compiler)    # required
+set(Torch_DIR /path/to/libtorch)                # required
+set(OpenBLAS_DIR /path/to/openblas)             # required
+set(Python_EXECUTABLE /python/to/python3)       # optional  for python interface
+set(pybind11_DIR /path/to/pybind11)             # optional  for python interface(see Python Interface)
 ```
 
 Execute the following compound command to perform a default installation:
 
 ```console
-$ make ; make install ; make neat
+$ mkdir build && cd build && cmake .. && make
 ```
 
-The executables will be placed in `airss-0.9.1/bin`, which you should add to your path. To verify that the installation ran as expected, run the following command:
+The executables will be placed in `torchdemo/build`, which you could add to your path. To verify that the installation ran as expected, run the following command:
 
 ```console
-$ make check
+$ acnn
 ```
 
-The output will tell you whether the essential, recommended, and optional components are installed and accessible. It will also attempt to run a select number of calculations from the examples.
+The output menu will tell you how to use acnn for simulations. It will also attempt to create an input control file.
 
-> **Note:** It is strongly recommended that `gcc` and `gfortran` version 5 and above are used to build the AIRSS
+
+> **Note:** It is strongly recommended that `g++` version 9 and above are used to build the AIRSS
 utilities. Other compiler families (such as `ifort`) are not supported.
 
 Troubleshooting

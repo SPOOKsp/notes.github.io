@@ -4,7 +4,7 @@ en:
   docs:
     - title: Getting Started
       children:
-        - title: About AIRSS
+        - title: About ACNN
           url: /    
         - title: Installation
           url: /getting-started/installation/
