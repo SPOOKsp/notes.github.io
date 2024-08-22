@@ -8,6 +8,8 @@ en:
           url: /    
         - title: Installation
           url: /getting-started/installation/
+        - title: External Interface
+          url: /getting-started/external_interface/
 #        - title: AIRSS in Binder
 #          url: /getting-started/airss-in-binder/
     - title: Tutorials

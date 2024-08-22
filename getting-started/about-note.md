@@ -11,16 +11,16 @@ permalink: /
 
 ACNN is a machine learning potential approach for atomic simulations. The original purpose was to
 serve as the machine learning module for the real-space finite-difference based
-large-scale KS-DFT simulation software (ARES), but it can relatively straightforward to be used
+large-scale KS-DFT simulation software (ARES), but it can be relatively straightforward to be used
 independently. 
 
-Its main design concept is to couple multi-head self-attention
+Its main design concept is to couple a multi-head self-attention
 mechanism with traditional short-range machine learning potentials to improve
 the accuracy of machine learning potentials, allows users to train machine
 learning potential models with different levels of accuracy, including or excluding
 attention mechanisms, based on their specific accuracy requirements.
 
-ACNN primarily written in C++ and based on libtorch (C++ Distributions of PyTorch). 
+ACNN is primarily written in C++ and based on libtorch (C++ Distributions of PyTorch). 
 Some practical utilities are placed in `scripts/`, 
 and external program interfaces are placed in `interface/`.
 
