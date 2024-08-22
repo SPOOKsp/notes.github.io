@@ -8,6 +8,7 @@ sidebar:
   nav: "docs"
 ---
 
+---
 ### Dependencies
 - Libtorch (Pre-cxx11 ABI for broader platform support)
 - OpenBLAS (Accelerated molecular dynamics simulations for CPU) [make USE_OPENMP=1]
