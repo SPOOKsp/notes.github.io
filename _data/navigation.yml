@@ -16,6 +16,8 @@ en:
       children:
         - title: Examples
           url: /tutorials/examples/
+        - title: Ternary Structures Search with AIRSS
+          url: /tutorials/airss_ternary/
    #- title: How-To Guides
    #  children:
    #    - title: How to set up high-pressure binary structure searches
