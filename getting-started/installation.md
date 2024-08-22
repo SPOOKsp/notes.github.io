@@ -8,7 +8,8 @@ sidebar:
   nav: "docs"
 ---
 
----
+ACNN has passed tested on the x86_64 Linux platform.
+
 ### Dependencies
 - Libtorch (Pre-cxx11 ABI for broader platform support)
 - OpenBLAS (Accelerated molecular dynamics simulations for CPU) [make USE_OPENMP=1]
@@ -58,9 +59,10 @@ $ acnn
 
 The output menu will tell you how to use acnn for simulations. It will also attempt to create an input control file.
 
-
 > **Note:** It is strongly recommended that `g++` version 9 and above are used to build the AIRSS
 utilities. Other compiler families (such as `ifort`) are not supported.
+
+
 
 Troubleshooting
 ---------------
